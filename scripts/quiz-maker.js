@@ -46,14 +46,20 @@ function setQuestionNumber(question_number) {
     questionNumberDisplay.innerHTML = `Question ${question_number + 1} of ${totalQuestionsNum}`;
     if (currentQuestionIndex + 1 >= totalQuestionsNum) {
         document.getElementById("next-button").hidden = true;
+        document.getElementById("mobile-next-button").hidden = true;
     } else {
         document.getElementById("next-button").hidden = false;
+        document.getElementById("mobile-next-button").hidden = false;
+
     } 
     
     if ( currentQuestionIndex - 1 < 0 ) {
         document.getElementById("previous-button").hidden = true;
+        document.getElementById("mobile-previous-button").hidden = true;
     } else  {
         document.getElementById("previous-button").hidden = false;
+        document.getElementById("mobile-previous-button").hidden = false;
+
     }
 
     questionName.value = questions[currentQuestionIndex].name;
@@ -96,6 +102,22 @@ document
 
 document
     .getElementById("previous-button")
+    .addEventListener( 'click',
+        () => {
+            setQuestionNumber(currentQuestionIndex - 1)
+        }
+    )
+
+document
+    .getElementById("mobile-next-button")
+    .addEventListener('click', 
+        () => {
+            setQuestionNumber(currentQuestionIndex + 1);
+        }
+    )
+
+document
+    .getElementById("mobile-previous-button")
     .addEventListener( 'click',
         () => {
             setQuestionNumber(currentQuestionIndex - 1)
