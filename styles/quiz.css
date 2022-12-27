@@ -5,6 +5,10 @@
     grid-template-columns: 1fr 1fr;
 }
 
+p {
+    text-align: center;
+}
+
 .quiz-subquestion {
     padding: 1rem;
 }
