@@ -40,6 +40,10 @@ h3 {
   color: #292929;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .round-button {
   background-color: #414141;
   font-size: 2rem;
@@ -118,12 +122,20 @@ label {
   .buttons-display {
     flex-direction: column;
   }
+
+  .side-by-side-flex-mobile {
+    flex-direction: row;
+  }
+
   .buttons-display button {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
   body {
     margin: 2rem;
+  }
+  .mobile-only {
+    display: block
   }
 }
 
@@ -136,4 +148,5 @@ input[type=number] {
   border-radius: 1rem;
   padding: 0.3rem 1rem;
   border-style: solid;
+
 }
