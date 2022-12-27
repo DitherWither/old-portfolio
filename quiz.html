@@ -1,0 +1,113 @@
+<!-- Author: Vardhan Patil (DitherWither) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles/app.css" />
+  <link rel="stylesheet" href="styles/quiz.css" />
+  <link rel="icon" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="input-display">
+      <h1>Quiz</h1>
+      <h2>Please upload the quiz file</h2>
+      <p>If you do not have one, create it using the<a href="quiz-maker.html">Quiz Maker.</a></p>
+
+      <div class="buttons-display">
+        <input type="file" name="file-upload" accept=".json" class="file-input" id="file-upload">
+        <label for="file-upload" class="file-input-label">Select a quiz file</label>
+        <button class="primary-button" id="start-quiz-button" hidden>Start Quiz</button>
+      </div>
+    </div>
+
+
+    <div id="quiz-display" hidden>
+      <h1>Quiz</h1>
+
+      <h3 class="question-text">Question Text</h3>
+      <div class="questions-display">
+
+
+        <label class="quiz-subquestion" for="quiz-question-a">
+          <input type="radio" name="quiz-option" id="quiz-question-a" value="0">
+          <span class="option-text">
+            Option A
+          </span>
+        </label>
+
+        <label class="quiz-subquestion" for="quiz-question-b">
+          <input type="radio" name="quiz-option" id="quiz-question-b" value="1">
+          <span class="option-text">
+            Option B
+          </span>
+        </label>
+
+        <label class="quiz-subquestion" for="quiz-question-c">
+          <input type="radio" name="quiz-option" id="quiz-question-c" value="2">
+          <span class="option-text">
+            Option C
+          </span>
+        </label>
+
+        <label class="quiz-subquestion" for="quiz-question-d">
+          <input type="radio" name="quiz-option" id="quiz-question-d" value="3">
+          <span class="option-text">
+            Option D
+          </span>
+        </label>
+      </div>
+
+      <div id="correct-answer-display" class="answer-status-display" style="background-color: #28A36B" hidden>
+        <h3>
+          Correct!
+        </h3>
+        <h5>
+          Press the next button for more questions.
+        </h5>
+      </div>
+
+      <div id="wrong-answer-display" class="answer-status-display" style="background-color: #ED333B" hidden>
+        <h3>
+          Wrong Answer!
+        </h3>
+        <h5>
+          Please try again.
+        </h5>
+      </div>
+
+      <div id="no-selected-answer-display" class="answer-status-display" style="background-color: gray" hidden>
+        <h3>
+          Please select an option.
+        </h3>
+      </div>
+
+      <div class="buttons-display">
+        <div>
+          <button id="submit-button" class="primary-button">Submit</button>
+          <button id="next-button" class="primary-button" hidden>Next</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div id="result-display" hidden>
+      <h1>Quiz is complete</h1>
+      <h2>Thanks for participating in this quiz</h2>
+      <div class="answer-status-display" style="background-color: #28A36B" id="result-marks-display">
+        <h3 id="marks-display">
+          Loading...
+        </h3>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="scripts/quiz.js"></script>
+</body>
+
+</html>

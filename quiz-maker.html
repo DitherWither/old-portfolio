@@ -1,0 +1,88 @@
+<!-- Author: Vardhan Patil (DitherWither) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/app.css" />
+    <link rel="stylesheet" href="styles/quiz-maker.css">
+    <link rel="icon" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="empty-space"></div>
+            <button class="round-button" id="previous-button" hidden>🢐</button>
+        </div>
+        <div id="questions-num-picker">
+            <h1>Quiz Maker</h1>
+
+            <div class="input-grid">
+                <label for="questions-num">Number of questions</label>
+                <input inputmode="numeric" type="text" name="questions-num" id="questions-num" autocomplete="off">
+            </div>
+
+            <div class="buttons-display">
+                <button class="primary-button" id="questions-num-button">Create Quiz</button>
+            </div>
+
+        </div>
+        
+        <div id="quiz-display" hidden>
+            <h1>Quiz Maker</h1>
+            <h2 id="question-number-display">Question ??? of ???</h2>
+            <div class="input-grid">
+                <label for="question-name">Question name</label>
+                <input type="text" name="question-name" id="name" autocomplete="off">
+
+            </div>
+            <div class="input-grid">
+                <label for="option-a">Option 1</label>
+                <input type="text" class="option" id="option-a" autocomplete="off">
+
+
+                <label for="option-b">Option 2</label>
+                <input type="text" class="option" id="option-b" autocomplete="off">
+
+
+                <label for="option-c">Option 3</label>
+                <input type="text" class="option" id="option-c" autocomplete="off">
+
+
+                <label for="option-d">Option 4</label>
+                <input type="text" class="option" id="option-d" autocomplete="off">
+            </div>
+
+            <div class="input-grid">
+                <label for="correct-option">Correct Option</label>
+                <input inputmode="numeric" type="text" maxlength="1" id="correct-option" list="option-values" autocomplete="off">
+                <datalist id="option-values">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                </datalist>
+                <div class="empty-space"></div>
+            </div>
+
+            <div class="buttons-display">
+            </div>
+
+            <div class="buttons-display">
+                <button class="primary-button" id="create-button">Create Question</button>
+            </div>
+        </div>
+        <div>
+            <div class="empty-space"></div>
+            <button class="round-button" id="next-button" hidden>🢒</button>
+        </div>
+    </div>
+    <script type="module" src="scripts/quiz-maker.js"></script>
+</body>
+
+</html>

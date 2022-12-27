@@ -1,0 +1,120 @@
+/* Author: Vardhan Patil(DitherWither) */
+
+
+*,
+*::before,
+*::after {
+  font-size: 12pt;
+}
+
+body {
+  margin: 1rem;
+  height: 100%;
+  background-color: #F6F5F4;
+  color: #414141;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Nimbus Roman", 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  color: #292929;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #292929;
+}
+
+.round-button {
+  background-color: #414141;
+  font-size: 2rem;
+  padding: 0rem 1rem;
+  border-radius: 3rem;
+}
+
+button, .file-input-label {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 3rem;
+  padding: 1rem;
+  border: 0px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: large;
+  font-weight: bolder;
+  color: white;
+  background: linear-gradient(#0000, rgb(0 0 0/40%)) top/100% 800%;
+  transition: all 0.3s ease-in-out;
+
+}
+
+button:hover, .file-input-label:hover {
+  background-position: bottom;
+}
+
+
+div.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+input {
+  margin-right: 1rem;
+  margin-top: 0.4rem;
+}
+
+a {
+  color: #5989C2;
+  margin: 0.3rem;
+}
+
+ul {
+  margin-left: 2rem;
+}
+
+label {
+  font-weight: 500;
+}
+
+.primary-button {
+  background-color: #3584E4;
+
+}
+
+.green-button {
+  background-color: #28A36B;
+}
+
+
+
+.buttons-display {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.empty-space {
+  padding: 0rem 3rem;
+}
+
+input[type=text], input[type=number] {
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  border-style: solid;
+}

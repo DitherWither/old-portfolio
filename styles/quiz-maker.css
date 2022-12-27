@@ -1,0 +1,22 @@
+/* Author: Vardhan Patil(DitherWither) */
+
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+}
+
+.input-grid label {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
+
+.mono-display {
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
